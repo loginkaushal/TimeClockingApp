@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<scriptx src="/app.js"></scriptx>
+</head>
+<body>
+
+<div class="container-fluid">
+  <h1>Report ILC</h1>
+
+<form  action="http://timereporting.mybluemix.net/ProcessReportingData" method="post">
+    <div class="form-group">
+      <label for="EmpID">Employee ID</label>
+      <input type="text" class="form-control" name="EmpID" placeholder="Enter Employee ID" >
+    </div>
+    <div class="form-group">
+      <label for="ILCStatus">ILC Status</label>
+      <Select class="form-control" name="ILCStatus"><option>Yes</option><option>No</option></select>
+    </div>
+	<div class="form-group">
+      <label for="Week">Week</label>
+      <Select class="form-control" name="Week"><option>17/12/2016-23/12/2016</option><option>24/12/2016-30/12/2016</option></select>
+    </div>
+    <button type="submit" class="btn btn-default" value="send" id="submit" >Submit</button>
+  </form>
+</div>
+
+</body>
+</html>

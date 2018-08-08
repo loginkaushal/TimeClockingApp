@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  
+<meta charset="UTF-8">
+  
+
+<title>Get Reports</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.js"></script>
+<script src="./app.js"></script>
+
+</head>
+
+
+<body ng-app="myApp">
+ 
+
+
+<div ng-controller="customersCtrl">
+
+
+
+<div class="container-fluid">
+  <h1>ILC Report</h1>
+
+<form>
+	<div class="form-group">
+      <label for="Week">Week</label>
+      <Select class="form-control" ng-model="selectedWeek" value="selectedWeek" name="Week"><option>17/12/2016-23/12/2016</option><option>24/12/2016-30/12/2016</option></select>
+    </div>
+    <button ng-click="getDefaulters()" >Submit</button>
+  </form>
+</div>
+
+
+  
+
+<div  Report-Generation >
+	</div>
+  
+</div>
+
+
+</body>
+
+
+
+</html>
+

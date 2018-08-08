@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<!--style>
+table, th , td  {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+}
+table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+</style-->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.js"></script>
+<script src="./app.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="customersCtrl"> 
+
+<table ng-table="tableParams" class="table" show-filter="true">
+  <tr ng-repeat="x in data">
+    <td title="'SrNo'" filter="{ SrNo: 'number'}" sortable="'SrNo'">{{ $index + 1 }}</td>
+    <td title="'EmpID'" filter="{ EmpID: 'text'}" sortable="'EmpID'">{{ x.EmpID }}</td>
+    <td title="'EmpName'" filter="{ EmpName: 'text'}" sortable="'EmpName'">{{ x.EmpName }}</td>
+	<td title="'ManagersID'" filter="{ ManagersID: 'text'}" sortable="'ManagersID'">{{ x.ManagersID }}</td>
+	<td title="'ManagersName'" filter="{ ManagersName: 'text'}" sortable="'ManagersName'">{{ x.ManagersName }}</td>
+  </tr>
+</table>
+
+</div>
+
+<script>
+</script>
+</head>
+</body>
+</html>
